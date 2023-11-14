@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        canvas#modern {
+  background-color: beige;
+  border: 20px solid black;
+}
+    </style>
+</head>
+<body>
+    <canvas id="modern" height = "500" width = "1000">fard</canvas>
+
+    <script>
+        //caching "modern"
+const modern = document.getElementById('modern')
+let ctx = modern.getContext('2d');
+
+//squares
+ctx.fillStyle = "green"
+ctx.fillRect(50, 50, 900, 400);
+ctx.strokeStyle = "black";
+ctx.lineWidth = 10;
+ctx.strokeRect (50, 50, 900, 400);
+
+//circles
+ctx.arc(200, 200, 50, Math.PI*1.3, Math.PI * 2);
+ctx.fillStyle="blue";
+ctx.fill();
+ctx.lineWidth=20;
+ctx.strokeStyle = "red";
+ctx.stroke();
+
+ctx.beginPath();
+ctx.arc(500, 120, 50, Math.PI/2, Math.PI * 2);
+ctx.fillStyle="yellow";
+ctx.fill();
+ctx.lineWidth=10;
+ctx.strokeStyle = "blue";
+ctx.stroke();
+
+ctx.beginPath();
+ctx.arc(400, 390, 50, Math.PI, Math.PI * 2);
+ctx.fillStyle="purple";
+ctx.fill();
+ctx.lineWidth=5;
+ctx.strokeStyle = "yellow";
+ctx.stroke();
+
+ctx.beginPath();
+ctx.arc(700, 250, 50, 0, Math.PI * 2);
+ctx.fillStyle="red";
+ctx.fill();
+ctx.lineWidth=30;
+ctx.strokeStyle = "purple";
+ctx.stroke();
+    </script>
+</body>
+</html>
